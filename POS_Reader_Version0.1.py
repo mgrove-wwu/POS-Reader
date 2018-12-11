@@ -12,6 +12,7 @@ import random
 import time
 import numpy as np
 
+filename = "file.pos"
 # IMPORTANT: Choose how many rows to read. Do NOT change the value
 #            for columns as it depends on the .POS file architecture
 # CAREFUL:   Use int(len(f_input.read())/4) to read complete file
@@ -47,7 +48,7 @@ part_size = 4
 start = time.time()
 
 # Reading data from POS file
-with open('R04_20666-v01.pos', 'rb') as f_input:    
+with open(filename, 'rb') as f_input:    
     data = np.empty((rows, columns), dtype=float)
     block_size = rows * part_size * columns
 
